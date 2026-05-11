@@ -53,6 +53,12 @@ echo Membersihkan file installer sementara...
 del "%TEMP%\python_installer.exe"
 echo [SUKSES] Python berhasil diinstall!
 
+:install_deps
+echo.
+echo Menginstall pustaka yang dibutuhkan (Pystray, Pillow)...
+python -m pip install pystray pillow >nul 2>&1
+py -m pip install pystray pillow >nul 2>&1
+
 :register_startup
 echo.
 echo [2/2] Mendaftarkan OculusCare ke Startup Windows...
