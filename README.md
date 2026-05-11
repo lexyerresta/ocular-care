@@ -1,5 +1,16 @@
 # VisionCare™ - Ocular Protection System
 
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Open Source](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red.svg)
+![Contributions welcome](https://img.shields.io/badge/Contributions-welcome-orange.svg)
+
+*(Read this in other languages: [English](README_EN.md) | **Bahasa Indonesia**)*
+
+<div align="center">
+  <img src="assets/ocular_care.png" alt="OcularCare Dashboard" width="600"/>
+</div>
+
 **VisionCare™** adalah utilitas klinis desktop yang dirancang khusus untuk mencegah *Computer Vision Syndrome* (CVS) atau Sindrom Kelelahan Mata Digital. Aplikasi ini beroperasi berdasarkan **Protokol 20-20-20** yang direkomendasikan secara medis secara global.
 
 ## 🩺 Mengapa Anda Membutuhkan Ini?
@@ -49,6 +60,20 @@ Jika Anda ingin menonaktifkan aplikasi ini agar tidak lagi menyala otomatis di P
 2. Klik dua kali pada file **`Uninstall_AutoStart.bat`**.
 3. *Startup Routine* berhasil dihapus.
 4. Anda dapat dengan aman menghapus folder VisionCare™ dari komputer Anda jika sudah tidak digunakan sama sekali.
+
+---
+
+## 🤝 Mari Berkontribusi (Open Source Community)
+
+Proyek ini adalah 100% *Open Source* dan didedikasikan untuk komunitas. Jika Anda seorang *developer* dan memiliki ide untuk mengembangkan aplikasi ini (misalnya menambahkan pengaturan kustom UI, suara baru, atau statistik penggunaan), kami sangat menyambut **Pull Request (PR)** Anda!
+
+Silakan baca [Panduan Berkontribusi (CONTRIBUTING.md)](CONTRIBUTING.md) untuk mengetahui langkah-langkah mengirimkan kode, atau silakan buka **Issues** jika Anda menemukan *bug* maupun ingin berdiskusi soal fitur baru.
+
+---
+
+## 💡 Ucapan Terima Kasih (Acknowledgments)
+
+Ide dan konsep utama dari aplikasi medis ini digagas sepenuhnya oleh **Lexy Erresta**. Dalam pengembangan kodenya, proyek ini dibantu oleh **Antigravity** (Google DeepMind AI) sebagai asisten *pair-programming*.
 
 ---
 
