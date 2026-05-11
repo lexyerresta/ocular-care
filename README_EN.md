@@ -1,4 +1,4 @@
-# VisionCare™ - Ocular Protection System
+# OculusCare™ - Ocular Protection System
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
@@ -11,7 +11,7 @@
   <img src="assets/ocular_care.png" alt="OcularCare Dashboard" width="600"/>
 </div>
 
-**VisionCare™** is a clinical desktop utility specifically designed to prevent Computer Vision Syndrome (CVS) or Digital Eye Strain. This application operates based on the medically recommended **20-20-20 Protocol** globally recognized by eye care professionals.
+**OculusCare™** is a clinical desktop utility specifically designed to prevent Computer Vision Syndrome (CVS) or Digital Eye Strain. This application operates based on the medically recommended **20-20-20 Protocol** globally recognized by eye care professionals.
 
 ## 🩺 Why Do You Need This?
 Continuous screen exposure can cause eye muscle fatigue, dry eyes, and tension headaches. The 20-20-20 rule is the most recognized first-line medical intervention:
@@ -35,14 +35,14 @@ You can easily distribute this application to various PCs/Laptops in your office
 4. The script will process the installation independently:
    - Checks System Requirements (Python Environment).
    - If the system does not meet the requirements, it will **download and install Python in the background** (requires an internet connection). *Note: If a Windows User Account Control (UAC) prompt appears, please click "Yes".*
-   - Registers VisionCare™ into the Windows Startup Registry.
-5. After the process is complete and a success confirmation appears, press any key to exit. VisionCare™ is now active and will always launch automatically on that computer!
+   - Registers OculusCare™ into the Windows Startup Registry.
+5. After the process is complete and a success confirmation appears, press any key to exit. OculusCare™ is now active and will always launch automatically on that computer!
 
 ---
 
 ## 💻 Daily Usage
 
-- **Automatic Mode:** After the installation above, you don't need to do anything else. Every time the computer turns on, VisionCare™ will be on standby protecting your eyes.
+- **Automatic Mode:** After the installation above, you don't need to do anything else. Every time the computer turns on, OculusCare™ will be on standby protecting your eyes.
 - **Manual Mode:** If you just closed the application and want to restart it without rebooting the PC, simply double-click the **`OcularCareLauncher.bat`** file.
 
 While the application is running, you will see a main control window (Dashboard). We recommend you **Minimize** this window (the minus button in the top right corner) so it doesn't block your workspace. The reminder system will continue to run perfectly in the background.
@@ -64,10 +64,10 @@ Please read the [Contributing Guide (CONTRIBUTING.md)](CONTRIBUTING.md) to learn
 ## 🗑️ Uninstallation Procedure
 
 If you wish to disable this application so it no longer starts automatically:
-1. Open the VisionCare™ installation folder.
+1. Open the OculusCare™ installation folder.
 2. Double-click the **`Uninstall_AutoStart.bat`** file.
 3. The Startup Routine will be successfully removed.
-4. You can safely delete the VisionCare™ folder from your computer if it is no longer used.
+4. You can safely delete the OculusCare™ folder from your computer if it is no longer used.
 
 ---
 

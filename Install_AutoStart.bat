@@ -1,7 +1,7 @@
 @echo off
 color 0B
 echo ========================================================
-echo       VISIONCARE(TM) - OCULAR PROTECTION SYSTEM
+echo       OCULUSCARE(TM) - OCULAR PROTECTION SYSTEM
 echo ========================================================
 echo.
 
@@ -55,7 +55,7 @@ echo [SUKSES] Python berhasil diinstall!
 
 :register_startup
 echo.
-echo [2/2] Mendaftarkan VisionCare ke Startup Windows...
+echo [2/2] Mendaftarkan OculusCare ke Startup Windows...
 
 set "TARGET_PATH=%~dp0OcularCareLauncher.bat"
 set "SHORTCUT_PATH=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\OcularCareProtocol.lnk"
@@ -64,7 +64,7 @@ set "WORKING_DIR=%~dp0"
 powershell -Command "$wshell = New-Object -ComObject WScript.Shell; $s = $wshell.CreateShortcut('%SHORTCUT_PATH%'); $s.TargetPath = '%TARGET_PATH%'; $s.WorkingDirectory = '%WORKING_DIR%'; $s.WindowStyle = 7; $s.Save()"
 
 echo.
-echo [SUKSES] VisionCare berhasil didaftarkan! 
+echo [SUKSES] OculusCare berhasil didaftarkan! 
 echo Memulai aplikasi untuk pertama kali...
 start "" "%TARGET_PATH%"
 echo Aplikasi sudah berjalan di latar belakang.

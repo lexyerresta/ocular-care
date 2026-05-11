@@ -8,7 +8,7 @@ REST_SECONDS = 20
 class EyeRestTimer:
     def __init__(self, root):
         self.root = root
-        self.root.title("VisionCare™ - Ocular Protection System")
+        self.root.title("OculusCare™ - Ocular Protection System")
         self.root.geometry("540x460")
         self.root.configure(bg="#F0F4F8")  # Premium clinical light blue-gray
         self.root.resizable(False, False)
@@ -18,14 +18,13 @@ class EyeRestTimer:
         self.is_working = True
         self.is_paused = False
         self.time_left_ms = self.work_ms
-        self.timer_id = None
         
         # Header Frame
         header_frame = tk.Frame(root, bg="#0D3B66", height=75)
         header_frame.pack(fill="x", side="top")
         header_frame.pack_propagate(False)
         
-        tk.Label(header_frame, text="V I S I O N C A R E ™", font=("Segoe UI", 16, "bold"), fg="#FFFFFF", bg="#0D3B66").pack(pady=(12, 0))
+        tk.Label(header_frame, text="O C U L U S C A R E ™", font=("Segoe UI", 16, "bold"), fg="#FFFFFF", bg="#0D3B66").pack(pady=(12, 0))
         tk.Label(header_frame, text="Ocular Protection Protocol", font=("Segoe UI", 9), fg="#A0C4FF", bg="#0D3B66").pack()
         
         # Content Frame
@@ -68,15 +67,9 @@ class EyeRestTimer:
         else:
             self.is_paused = True
             self.btn_pause.config(text="Lanjutkan Pemantauan", bg="#0D3B66", fg="#FFFFFF", activebackground="#155591")
-            if self.timer_id:
-                self.root.after_cancel(self.timer_id)
-                self.timer_id = None
             self.status_label.config(text="Status: SIAGA (Pemantauan Dijeda)", fg="#D90429")
 
     def force_overlay(self):
-        if self.timer_id:
-            self.root.after_cancel(self.timer_id)
-            self.timer_id = None
         self.is_paused = False
         if hasattr(self, 'btn_pause'):
             self.btn_pause.config(text="Jeda Pemantauan", bg="#E9ECEF", fg="#495057", activebackground="#DDE2E5")
@@ -90,17 +83,16 @@ class EyeRestTimer:
             
         if reset:
             self.time_left_ms = self.work_ms
-            
-        if self.timer_id:
-            self.root.after_cancel(self.timer_id)
-        self.timer_id = self.root.after(self.time_left_ms, self.show_overlay)
 
     def update_status_loop(self):
         if self.is_working and not self.is_paused:
-            mins = (self.time_left_ms // 1000) // 60
-            secs = (self.time_left_ms // 1000) % 60
-            self.status_label.config(text=f"Waktu menuju sesi relaksasi: {mins:02d}:{secs:02d}", fg="#005B9F")
-            self.time_left_ms -= 1000
+            if self.time_left_ms <= 0:
+                self.show_overlay()
+            else:
+                mins = (self.time_left_ms // 1000) // 60
+                secs = (self.time_left_ms // 1000) % 60
+                self.status_label.config(text=f"Waktu menuju sesi relaksasi: {mins:02d}:{secs:02d}", fg="#005B9F")
+                self.time_left_ms -= 1000
         self.root.after(1000, self.update_status_loop)
 
     def show_overlay(self):
@@ -121,7 +113,7 @@ class EyeRestTimer:
         frame = tk.Frame(self.overlay, bg="#081C15")
         frame.place(relx=0.5, rely=0.5, anchor="center")
 
-        tk.Label(frame, text="V I S I O N C A R E ™   P R O T O C O L", font=("Segoe UI", 16, "bold"), fg="#52B788", bg="#081C15").pack(pady=(0, 15))
+        tk.Label(frame, text="O C U L U S C A R E ™   P R O T O C O L", font=("Segoe UI", 16, "bold"), fg="#52B788", bg="#081C15").pack(pady=(0, 15))
         tk.Label(frame, text="SESI RELAKSASI OKULER", font=("Segoe UI", 52, "bold"), fg="#FFFFFF", bg="#081C15").pack(pady=(0, 25))
         
         instruction = "Prosedur Klinis:\nAlihkan pandangan Anda dari layar. Tatap objek berjarak 6 meter."
